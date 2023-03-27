@@ -1,0 +1,242 @@
+html {
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #e6f0ff;
+    color: #0f172a;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    border: none;
+    font-family: inherit;
+}
+
+/* SEARCH */
+
+.search-container {
+    background-color: #14213d;;
+}
+
+.search-container div {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    gap: 0.5em;
+}
+
+.search-container .form-input {
+    font-family: inherit;
+    padding: 0.5em 1em;
+    font-size: 1.125rem;
+    border-radius: 2px;
+    border: none;
+    color: #14213d;
+}
+
+.form-input:focus {
+    outline: none;
+}
+
+.search-container .btn {
+    border-radius: 7px;
+    background-color: #fca311;
+    color: #000000;
+}
+
+/* FAVORITES */
+.favorites-content {
+    padding: 0.5em 0;
+    background-color: #415a77;
+}
+
+.favorites-content h5 {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    color: #ffffff;
+    width: 90%;
+    max-width: 900px;
+    margin: 0.5em auto 0.75em;
+}
+
+.favorites-container,
+.favorite-item {
+    display: flex;
+}
+
+.favorites-container {
+    gap: 0.5em;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.favorite-item {
+    flex-direction: column;
+    gap: 0.25em;
+    align-items: center;
+}
+
+.favorite-item .favorite-img {
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgb(0, 0, 0, .25);
+}
+
+.remove-btn {
+    border-radius: 5px;
+    border: none;
+    background-color: #fca311;
+    text-transform: lowercase;
+    padding: 0.5em 1em;
+    box-shadow: 0 0 15px rgb(0, 0, 0, .25);
+}
+
+/* MEALS */
+.meals-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    /* place-items: center; */
+}
+
+.single-meal {
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgb(0, 0, 0, .25);
+}
+
+.single-meal footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em 0;
+    font-size: 1.25rem;
+    /* background-color: #222; */
+}
+
+.single-meal .like-btn {
+    cursor: pointer;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: none;
+}
+
+/* MODAL */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: grid;
+    place-items: center;
+    transition: 0.3s ease-in-out all;
+    z-index: 100;
+}
+
+.modal-container {
+    width: 80vw;
+    max-width: 500px;
+    height: 80vh;
+    overflow: scroll;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.modal-img {
+    height: 15rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.modal-content {
+    padding: 1em 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.modal-content p {
+    color: #1b263b;
+    letter-spacing: 1px;
+    line-height: 1em;
+}
+
+.modal-content a {
+    color: #fca311;
+    text-decoration: underline;
+    transition: 0.3s ease-in-out all;
+}
+
+.modal-content a:hover {
+    color: #14213d;
+}
+
+.close-btn {
+    background: #fca311;
+    color: #ffffff;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 600px) {
+    .search-container div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .favorite-item .favorite-img {
+        width: 100px;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 18px;
+    }
+
+    .search-container div {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+}
